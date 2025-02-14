@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+:root {
+    --primary: #10B981;
+
+    --text-light: white;
+    --text-neutral: #D5D4D8;
+    --text-dark: #111827;
+
+    --neutral-light: #273549;
+    --neutral: #1F2937;
+    --neutral-dark: #1C1C1C;
+    font-size: 20px;
+}
+
+* {
+    margin: 0;
+    color: var(--text-light);
+    font-family: "Karla", serif;
+    font-optical-sizing: auto;
+}
+
+body {
+    background-color: var(--neutral-dark);
+}
+
+main {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+    width: 40%;
+    background-color: var(--neutral);
+    padding-inline: 2rem;
+    padding-block: 4rem;
+}
+
+.highlighted {
+    color: var(--primary);
+}
+
+.dimmed {
+    color: var(--text-neutral);
+    font-weight: 200;
+}
+
+button {
+    background-color: var(--primary);
+	border: none;
+    border-radius: 6px;
+	padding-inline: 1rem;
+	padding-block: 0.5rem;
+	font: inherit;
+	cursor: pointer;
+}
+
+hr {
+    margin-block: 2rem;
+    height: 2px;
+    border-width: 0;
+    color: var(--neutral-light);
+    background-color: var(--neutral-light);
+}
+
+.password-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.password {
+    background-color: var(--neutral-light);
+    flex: 1 0 40%;
+    text-align: center;
+    padding-inline: 1rem;
+	padding-block: 0.5rem;
+    border-radius: 6px;
+}

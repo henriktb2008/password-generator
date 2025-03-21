@@ -2,14 +2,21 @@ const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O",
 "/"]
 
 let passwordContainerEl = document.getElementById("password-container")
+let passwordSliderEl = document.getElementById("password-slider")
+
+let passwordAmout = 4
+
+generatePasswords()
+
+passwordSliderEl.oninput = function() {
+    passwordAmout = this.value * 2
+}
 
 function generatePasswords() {
-    console.log("clicked")
     while (passwordContainerEl.firstChild) {
         passwordContainerEl.removeChild(passwordContainerEl.lastChild)
     }
-
-    for (let i = 0; i < 4; i++) {
+    for (let i = 0; i < passwordAmout; i++) {
         addPassword(15)
     }
 }
